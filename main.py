@@ -34,21 +34,41 @@ headers = {
 response = requests.get("https://www.idealista.com/venta-viviendas/madrid-madrid/", headers=headers, cookies=cookies)
 #print(response)
 soup = BeautifulSoup(response.content, "html.parser")
-lists = soup.find_all("section","items-container")
+lists = soup.find_all("section", "items-container")
 print(lists)
-with open("housingmarket_madrid.csv", "w",encoding="utf8", newline="") as f:
+with open("housingmarket_madrid.csv", "w", encoding="utf8") as f:
     writer = csv.writer(f)
-    headers = ['Name', "Price","Rooms"]
+    headers = ['Name', "Location","City","Price", "Rooms", "Surface", "Floor"]
+    f.write(",".join(headers))
+    f.write("\n")
     for x in lists:
-        name = x.find('a','item-link').text
-        price = x.find('span', 'item-price h2-simulated').text
-        rooms = x.find("span", "item-detail").text
-        size = x.find("span", "item-detail").text
+        names = x.findAll('a', 'item-link')
+        prices = x.findAll('span', 'item-price h2-simulated')
+        rest = x.findAll('div', 'item-detail-char')
+    names_title = []
+    names_location = []
+    names_city = []
+    for name in names:
+        names_title.append(name.text.split(",")[0])
+        names_location.append(name.text.split(",")[1])
+        names_city.append(name.text.split(",")[2])
 
+    price_list = []
+    for price in prices:
+        price_list.append(price.text)
+    rooms_list = []
+    surface_list = []
+    floor_list = []
 
-print('Name      :',name)
-print('Price    :',price)
-print("Rooms: ", rooms)
-print("Size:", size)
+    for descr in rest:
+        rooms_list.append(descr.text.split('\n')[1])
+        surface_list.append(descr.text.split('\n')[2])
+        floor_list.append(descr.text.split('\n')[3])
+
+    for all_info in zip(names_title,names_location, names_city, price_list, rooms_list, surface_list, floor_list):
+        f.write(",".join(all_info))
+        f.write("\n")
+
+print(rooms_list)
 
 
