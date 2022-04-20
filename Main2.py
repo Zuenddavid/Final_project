@@ -1,6 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
+import requests
+import re
+import time
+
+
 cookies = {
     'atuserid': '%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%2255e94c26-21c6-4885-b794-c0ebc9099af2%22%2C%22options%22%3A%7B%22end%22%3A%222023-05-20T07%3A41%3A38.962Z%22%2C%22path%22%3A%22%2F%22%7D%7D',
     'atidvisitor': '%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-582065-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D',
@@ -32,41 +37,108 @@ headers = {
     'sec-ch-ua-platform': '"macOS"',}
 
 
-for page in range(1,20):
-    response = requests.get("https://www.idealista.com/venta-viviendas/madrid-madrid/", headers=headers, cookies=cookies)
-    soup = BeautifulSoup(response.content, "html.parser")
-    lists = soup.find_all("section", "items-container")
-print(lists)
-with open("housingmarket_madrid.csv", "w", encoding="utf8") as f:
-    writer = csv.writer(f)
-    headers = ['Name', "Location","Price", "Rooms", "Surface", "Floor"]
-    f.write(",".join(headers))
-    f.write("\n")
-    for x in lists:
-        names = x.findAll('a', 'item-link')
-        prices = x.findAll('span', 'item-price h2-simulated')
-        rest = x.findAll('div', 'item-detail-char')
-    names_title = []
-    names_location = []
-    names_city = []
-    for name in names:
-        names_title.append(name.text.split(",")[0])
-        names_location.append(name.text.split(",")[1])
-        #names_city.append(name.text.split(",")[2])
 
-    price_list = []
-    for price in prices:
-        price_list.append(price.text)
+def get_items():
+    url = "https://www.idealista.com"
+    next_page = url+"/venta-viviendas/madrid-madrid/"
+    lists = []
+    count = 0
+    while next_page and count < 6:
+        print(next_page)
+        response = requests.get(next_page, headers=headers, cookies = cookies)
+        print(response)
+        soup = BeautifulSoup(response.content, "html.parser")
+        lists.append(soup.find_all("section", "items-container"))
+        next_href = soup.find('li', attrs={'class': 'next'})
+        if next_href:
+            next_page = url+next_href.find("a")['href']
+        else:
+            next_page = None
+        print(next_page)
+        count+=1
+        time.sleep(30)
+        print("Wainting 30 seconds")
+    return lists
+
+def parse_rest(rest):
     rooms_list = []
     surface_list = []
     floor_list = []
+    is_exterior = []
+    ascensor = []
 
     for descr in rest:
-        rooms_list.append(descr.text.split('\n')[1])
+        rooms_list.append(descr.text.split('\n')[1].split(" ")[0])
         surface_list.append(descr.text.split('\n')[2])
-        floor_list.append(descr.text.split('\n')[3])
+        floor_text = descr.text.split('\n')[3]
+        #Check floor
+        if floor_text.split(' ')[0] == "Planta":
+            floor_list.append(floor_text.split(' ')[1])
+        elif re.search(r'\bBajo\b',floor_text, flags = re.IGNORECASE):
+                floor_list.append("Bajo")
+        else:
+            floor_list.append(" ")
+        #Check exterior / interior
+        if re.search(r'\bExterior\b',floor_text, flags = re.IGNORECASE):
+            is_exterior.append("Yes")
+        elif re.search(r'\bInterior\b',floor_text, flags = re.IGNORECASE):
+            is_exterior.append("No")
+        else:
+            is_exterior.append(" ")
 
-    for all_info in zip(names_title,names_location, price_list, rooms_list, surface_list, floor_list):
-        f.write(",".join(all_info))
+        #Check ascensor
+
+        if re.search(r'\bAscensor\b',floor_text, flags = re.IGNORECASE):
+            ascensor.append("Yes")
+        elif re.search(r'\bSin ascensor\b',floor_text, flags = re.IGNORECASE):
+            ascensor.append("No")
+        else:
+            ascensor.append(" ")
+    return rooms_list, surface_list, floor_list, is_exterior, ascensor
+
+def parse_location(full_location):
+    street_list = []
+    neig_list = []
+    city_list = []
+    for loc in full_location:
+        splitted_loc = loc.text.split(",")
+        city_list.append(splitted_loc[-1])
+        if len(splitted_loc) == 4:
+            street_list.append(" ".join(splitted_loc[0:2]))
+            neig_list.append(splitted_loc[2])
+        elif len(splitted_loc) == 2:
+            neig_list.append(" ")
+            street_list.append(splitted_loc[0])
+        else:
+            street_list.append(splitted_loc[0])
+            neig_list.append(splitted_loc[1])
+    return street_list, neig_list, city_list
+
+def write_houses(output_path, street_list, neig_list, city_list, price_list, rooms_list, surface_list, floor_list, is_exterior, ascensor):
+    with open(output_path, "w", encoding="utf8") as f:
+        writer = csv.writer(f)
+        headers = ['Street', "Neighborhood","City","Price", "Rooms", "Surface", "Floor", "Exterior", "Ascensor"]
+        #headers = ["Location","Price", "Rooms", "Surface", "Floor"]
+        f.write(",".join(headers))
         f.write("\n")
+        for all_info in zip(street_list, neig_list, city_list, price_list, rooms_list, surface_list, floor_list, is_exterior, ascensor):
+            f.write(",".join(all_info))
+            f.write("\n")
 
+def main():
+    lists = get_items()
+    full_location = []
+    prices = []
+    rest = []
+    price_list = []
+    for x in lists:
+        full_location = x.find('a', 'item-link')
+        prices = x.find('span', 'item-price h2-simulated')
+        rest.append(x.find('div', 'item-detail-char'))
+        price_list.extend([p.text for p in prices])
+    street_list, neig_list, city_list = parse_location(full_location)
+    rooms_list, surface_list, floor_list, is_exterior, ascensor = parse_rest(rest)
+    write_houses("housingmarket_madrid.csv", street_list, neig_list, city_list, price_list, rooms_list, surface_list, floor_list, is_exterior, ascensor)
+
+if __name__ == "__main__":
+    main()
