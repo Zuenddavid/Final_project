@@ -1,31 +1,181 @@
-Name,Location,Price,Rooms,Surface,Floor
-Piso en calle de Núñez de Balboa, Recoletos,1.800.000€,5 hab.,241 m²,Planta 5ª exterior
-Ático en calle de Alfonso X, Almagro,2.300.000€,3 hab.,335 m²,Planta 5ª exterior con ascensor
-Piso en calle de las Delicias, Palos de Moguer,345.000€,2 hab.,64 m²,Planta 1ª interior con ascensor
-Dúplex en calle Alconera, 7,175.900€,3 hab.,70 m²,Planta 3ª exterior con ascensor
-Piso en DON RAMÓN DE LA CRUZ, Goya,740.000€,2 hab.,121 m²,Planta 5ª exterior con ascensor
-Piso en paseo del general martinez campo, 44,1.575.000€,4 hab.,220 m²,Planta 7ª exterior con ascensor
-Piso en avenida de Badajoz, 13,490.000€,3 hab.,108 m²,Planta 11ª exterior con ascensor
-Chalet pareado en calle Antonio Cavero, Colina,1.280.000€,4 hab.,404 m²,
-Chalet adosado en ronda de Sobradiel, Conde Orgaz-Piovera,1.290.000€,4 hab.,350 m²,
-Casa o chalet independiente en ronda de Cala Basa, Conde Orgaz-Piovera,2.850.000€,6 hab.,720 m²,
-Piso en calle guzman del bueno, Vallehermoso,825.000€,4 hab.,173 m²,Planta 1ª exterior con ascensor
-Piso en calle de las Huertas, Huertas-Cortes,990.000€,3 hab.,180 m²,Planta 1ª exterior sin ascensor
-Piso en paseo de la Habana, Bernabéu-Hispanoamérica,1.825.000€,4 hab.,340 m², exterior con ascensor
-Chalet pareado en avenida Conde Orgaz, Conde Orgaz-Piovera,2.150.000€,6 hab.,575 m²,
-Piso en calle del general arrando, Almagro,1.900.000€,4 hab.,257 m²,Planta 3ª exterior con ascensor
-Piso en NUÑEZ DE BALBOA, Recoletos,2.250.000€,5 hab.,290 m²,Planta 4ª exterior con ascensor
-Piso en Goya, Madrid,1.990.000€,4 hab.,297 m²,Planta 1ª exterior con ascensor
-Piso en calle del General Oraá, Lista,750.000€,3 hab.,137 m²,Planta 1ª exterior con ascensor
-Ático en calle del Conde de Aranda, Recoletos,1.950.000€,5 hab.,287 m²,Planta 7ª exterior con ascensor
-Piso en portal de belen, Niño Jesús,748.000€,2 hab.,120 m²,Planta 2ª interior con ascensor
-Piso en calle Independencia, Palacio,549.000€,3 hab.,139 m²,Planta 1ª exterior con ascensor
-Piso en calle de Núñez de Balboa, 40,1.170.000€,4 hab.,141 m²,Planta 2ª exterior con ascensor
-Piso en avenida de Pío XII, 57,795.000€,3 hab.,246 m²,Bajo exterior
-Casa o chalet independiente en avenida de Valdemarín, Valdemarín,3.400.000€,7 hab.,800 m²,
-Piso en calle de Fuencarral, Chueca-Justicia,1.000.000€,4 hab.,160 m²,Planta 3ª exterior con ascensor
-Piso en calle de Velázquez, Recoletos,690.000€,1 hab.,91 m²,Planta 6ª interior con ascensor
-Piso en calle de Ayala, Recoletos,2.095.000€,6 hab.,240 m², exterior con ascensor
-Piso en calle de Rafael Calvo, s/n,1.190.000€,3 hab.,160 m²,Planta 1ª exterior con ascensor
-Ático en calle de María de Molina, Lista,670.000€,2 hab.,103 m²,Planta 7ª exterior con ascensor
-Piso en calle de Don Ramón de la Cruz, Goya,1.305.000€,4 hab.,200 m²,Planta 5ª exterior con ascensor
+	Street	Neighborhood	City	Price €	Rooms	Surface	Floor	Exterior	Elevator
+34	Piso en Almagro	 	 Madrid	175900	4	295 m²	6ª	Yes	Yes
+4	Dúplex en calle Alconera  7	 Hellín	 Madrid	175900	3	70 m²	3ª	Yes	Yes
+94	Piso en calle de Núñez de Balboa	 Recoletos	 Madrid	175900	5	241 m²	5ª	Yes	Yes
+160	Piso en Chueca-Justicia	 	 Madrid	260000	1	50 m²	1ª	No	Yes
+159	Piso en Malasaña-Universidad	 	 Madrid	339000	3	104 m²	2ª	Yes	Yes
+33	Dúplex en Almagro	 	 Madrid	345000	3	273 m²	 	Yes	Yes
+93	Piso en calle de San Marcos	 Chueca-Justicia	 Madrid	345000	2	234 m²	 	Yes	Yes
+3	Piso en calle de las Delicias	 Palos de Moguer	 Madrid	345000	2	64 m²	1ª	No	Yes
+129	Casa o chalet independiente en Valdemarín	 	 Madrid	435000	5	425 m²	 	 	 
+174	Casa o chalet independiente en El Plantío	 	 Madrid	435000	7	1.100 m²	 	 	 
+69	Piso en avenida de portugal	 Puerta del Ángel	 Madrid	435000	2	100 m²	1ª	Yes	Yes
+127	Piso en Aravaca	 	 Madrid	455000	4	240 m²	2ª	Yes	 
+67	Piso en Ibiza	 	 Madrid	455000	3	121 m²	2ª	Yes	Yes
+37	Piso en El Viso	 	 Madrid	490000	2	84 m²	6ª	No	Yes
+167	Piso en Goya	 	 Madrid	490000	3	151 m²	2ª	Yes	Yes
+7	Piso en avenida de Badajoz  13	 San Pascual	 Madrid	490000	3	108 m²	11ª	Yes	Yes
+97	Piso en calle santa cruz de marcenado	 Malasaña-Universidad	 Madrid	490000	3	187 m²	2ª	Yes	Yes
+19	Piso en calle Independencia	 Palacio	 Madrid	549000	3	139 m²	1ª	Yes	Yes
+109	Casa o chalet independiente en Mirasierra	 	 Madrid	549000	3	148 m²	 	 	 
+49	Piso en calle Lope de Rueda	 Goya	 Madrid	549000	4	171 m²	2ª	Yes	Yes
+176	Ático en Lista	 	 Madrid	589000	5	227 m²	6ª	Yes	Yes
+120	Casa o chalet independiente en Aravaca	 	 Madrid	615000	6	488 m²	 	 	 
+60	Casa o chalet independiente en calle Alhena	 Aravaca	 Madrid	615000	6	488 m²	 	 	 
+156	Piso en calle de Goya	 Goya	 Madrid	670000	5	183 m²	1ª	Yes	Yes
+27	Ático en calle de María de Molina	 Lista	 Madrid	670000	2	103 m²	7ª	Yes	Yes
+117	Piso en Aravaca	 	 Madrid	670000	4	141 m²	1ª	Yes	 
+57	Casa o chalet independiente en calle Virgen de los Rosales	 Aravaca	 Madrid	670000	5	1.055 m²	 	 	 
+75	Casa o chalet independiente en calle Conde Orgaz	 Conde Orgaz-Piovera	 Madrid	670000	8	798 m²	 	 	 
+135	Piso en paseo de la Reina Cristina	 Jerónimos	 Madrid	670000	4	140 m²	4ª	Yes	Yes
+24	Piso en calle de Velázquez	 Recoletos	 Madrid	690000	1	91 m²	6ª	No	Yes
+54	Chalet adosado en calle Araquil	 Aravaca	 Madrid	690000	5	270 m²	 	 	 
+114	Piso en Almagro	 	 Madrid	690000	3	218 m²	7ª	Yes	Yes
+132	Ático en Valdebebas - Valdefuentes	 	 Madrid	700000	4	256 m²	8ª	Yes	Yes
+72	Piso en Mirasierra	 	 Madrid	700000	6	310 m²	2ª	Yes	Yes
+168	Piso en Fuentelarreina	 	 Madrid	710000	6	302 m²	5ª	Yes	Yes
+90	Piso en sor angela de la cruz	 Cuzco-Castillejos	 Madrid	740000	6	254 m²	11ª	Yes	Yes
+95	Chalet adosado en Conde Orgaz-Piovera	 	 Madrid	740000	6	406 m²	 	 	 
+0	Piso en calle del General Oraá	 Lista	 Madrid	740000	3	137 m²	1ª	Yes	Yes
+35	Ático en Valdemarín	 	 Madrid	740000	5	340 m²	2ª	Yes	Yes
+30	Piso en Recoletos	 	 Madrid	740000	1	87 m²	2ª	No	 
+5	Piso en DON RAMÓN DE LA CRUZ	 Goya	 Madrid	740000	2	121 m²	5ª	Yes	Yes
+18	Piso en portal de belen	 Niño Jesús	 Madrid	748000	2	120 m²	2ª	No	Yes
+48	Piso en calle del Príncipe de Vergara	 Recoletos	 Madrid	748000	3	348 m²	2ª	Yes	Yes
+108	Ático en Pacífico	 	 Madrid	748000	4	225 m²	5ª	Yes	Yes
+76	Piso en calle Conde Orgaz	 Conde Orgaz-Piovera	 Madrid	750000	3	166 m²	1ª	Yes	Yes
+136	Piso en Recoletos	 	 Madrid	750000	4	220 m²	2ª	Yes	Yes
+166	Piso en calle de Velázquez	 Recoletos	 Madrid	770000	2	247 m²	 	Yes	Yes
+139	Piso en Castellana	 	 Madrid	785000	4	162 m²	1ª	Yes	Yes
+79	Piso en NÚÑEZ DE BALBOA	 Recoletos	 Madrid	785000	3	152 m²	2ª	No	Yes
+21	Piso en avenida de Pío XII  57	 Nueva España	 Madrid	795000	3	246 m²	Bajo	Yes	 
+51	Piso en paseo de la Castellana	 El Viso	 Madrid	795000	8	510 m²	3ª	Yes	Yes
+111	Piso en Ibiza	 	 Madrid	795000	4	181 m²	1ª	Yes	Yes
+41	Piso en Chueca-Justicia	 	 Madrid	825000	4	147 m²	4ª	No	Yes
+101	Piso en calle de O'Donnell	 Goya	 Madrid	825000	7	460 m²	 	Yes	Yes
+11	Piso en calle guzman del bueno	 Vallehermoso	 Madrid	825000	4	173 m²	1ª	Yes	Yes
+161	Piso en Adelfas	 	 Madrid	830000	4	150 m²	2ª	Yes	Yes
+163	Piso en calle de Ibiza	 Ibiza	 Madrid	849000	2	93 m²	Bajo	Yes	Yes
+137	Piso en Palacio	 	 Madrid	850000	2	195 m²	1ª	Yes	Yes
+77	Piso en alameda de Osuna	 Alameda de Osuna	 Madrid	850000	3	115 m²	1ª	Yes	Yes
+158	Piso en Malasaña-Universidad	 	 Madrid	860000	1	89 m²	1ª	Yes	Yes
+177	Piso en Goya	 	 Madrid	890000	3	196 m²	5ª	Yes	 
+130	Piso en Castellana	 	 Madrid	930000	5	327 m²	6ª	Yes	Yes
+70	Piso en calle de los Voluntarios Catalanes	 Valdeacederas	 Madrid	930000	2	62 m²	2ª	Yes	Yes
+164	Ático en calle de Ferraz	 Argüelles	 Madrid	950000	2	173 m²	6ª	Yes	Yes
+131	Ático en Goya	 	 Madrid	950000	2	130 m²	7ª	Yes	Yes
+71	Piso en Conde Orgaz-Piovera	 	 Madrid	950000	3	163 m²	2ª	Yes	Yes
+173	Casa o chalet independiente en El Plantío	 	 Madrid	960000	6	800 m²	 	 	 
+157	Ático en Costillares	 	 Madrid	990000	4	191 m²	7ª	Yes	Yes
+12	Piso en calle de las Huertas	 Huertas-Cortes	 Madrid	990000	3	180 m²	1ª	Yes	Yes
+102	Piso en calle de Fuencarral	 Trafalgar	 Madrid	990000	2	110 m²	3ª	Yes	Yes
+42	Ático en Sol	 	 Madrid	990000	4	135 m²	5ª	Yes	Yes
+23	Piso en calle de Fuencarral	 Chueca-Justicia	 Madrid	1000000	4	160 m²	3ª	Yes	Yes
+53	Casa o chalet independiente en calle de Guisando	 Ciudad Universitaria	 Madrid	1000000	5	788 m²	 	 	 
+113	Piso en calle de Fernández de la Hoz	 Almagro	 Madrid	1000000	4	132 m²	2ª	Yes	Yes
+80	Piso en paseo de la Castellana	 Cuzco-Castillejos	 Madrid	1050000	4	249 m²	1ª	Yes	Yes
+140	Dúplex en San Juan Bautista	 	 Madrid	1050000	3	127 m²	4ª	Yes	Yes
+84	Piso en calle de María de Molina	 Lista	 Madrid	1100000	1	73 m²	5ª	Yes	Yes
+144	Ático en Conde Orgaz-Piovera	 	 Madrid	1100000	5	344 m²	4ª	Yes	Yes
+170	Chalet pareado en El Plantío	 	 Madrid	1120000	6	400 m²	 	 	 
+171	Piso en Goya	 	 Madrid	1140000	3	167 m²	5ª	Yes	 
+162	Piso en Huertas-Cortes	 	 Madrid	1150000	1	41 m²	2ª	Yes	Yes
+20	Piso en calle de Núñez de Balboa  40	 Recoletos	 Madrid	1170000	4	141 m²	2ª	Yes	Yes
+110	Piso en Niño Jesús	 	 Madrid	1170000	2	179 m²	1ª	Yes	Yes
+50	Piso en calle de Rafael Salgado  9	 Bernabéu-Hispanoamérica	 Madrid	1170000	4	220 m²	4ª	Yes	Yes
+116	Piso en Aravaca	 	 Madrid	1190000	3	156 m²	Bajo	Yes	 
+26	Piso en calle de Rafael Calvo  s/n	 Almagro	 Madrid	1190000	3	160 m²	1ª	Yes	Yes
+56	Piso en paseo del Pintor Rosales	 Argüelles	 Madrid	1190000	5	475 m²	7ª	Yes	Yes
+169	Casa o chalet independiente en Conde Orgaz-Piovera	 	 Madrid	1275000	9	782 m²	 	 	 
+98	Piso en avenida DEL GENERAL PERON	 Cuatro Caminos	 Madrid	1280000	3	122 m²	5ª	Yes	Yes
+8	Chalet pareado en calle Antonio Cavero	 Colina	 Madrid	1280000	4	404 m²	 	 	 
+38	Piso en paseo de la Habana	 Bernabéu-Hispanoamérica	 Madrid	1280000	4	339 m²	3ª	Yes	Yes
+9	Chalet adosado en ronda de Sobradiel	 Conde Orgaz-Piovera	 Madrid	1290000	4	350 m²	 	 	 
+99	Piso en calle Duque de osuna	 Malasaña-Universidad	 Madrid	1290000	4	119 m²	1ª	Yes	Yes
+39	Piso en Aravaca	 	 Madrid	1290000	2	89 m²	3ª	Yes	Yes
+179	Ático en Jerónimos	 	 Madrid	1295000	5	280 m²	5ª	Yes	Yes
+118	Chalet adosado en Aravaca	 	 Madrid	1305000	5	250 m²	 	 	 
+28	Piso en calle de Don Ramón de la Cruz	 Goya	 Madrid	1305000	4	200 m²	5ª	Yes	Yes
+58	Casa o chalet independiente en avenida de Valdemarín	 Valdemarín	 Madrid	1305000	6	1.200 m²	 	 	 
+142	Piso en Recoletos	 	 Madrid	1305000	5	210 m²	5ª	Yes	Yes
+82	Piso en calle de Ayala	 Goya	 Madrid	1305000	3	173 m²	3ª	Yes	Yes
+65	Piso en Castellana	 	 Madrid	1485000	5	280 m²	1ª	Yes	Yes
+125	Ático en Aravaca	 	 Madrid	1485000	4	192 m²	2ª	Yes	Yes
+96	Casa o chalet independiente en Conde Orgaz-Piovera	 	 Madrid	1575000	6	719 m²	 	 	 
+6	Piso en paseo del general martinez campo  44	 Almagro	 Madrid	1575000	4	220 m²	7ª	Yes	Yes
+36	Piso en paseo de la Castellana	 Cuzco-Castillejos	 Madrid	1575000	7	430 m²	2ª	Yes	Yes
+29	Piso en Recoletos	 	 Madrid	1590000	2	146 m²	2ª	No	Yes
+59	Casa o chalet independiente en calle Hidra	 Aravaca	 Madrid	1590000	5	670 m²	 	 	 
+119	Piso en Castellana	 	 Madrid	1590000	3	179 m²	2ª	Yes	Yes
+155	Piso en calle Velázquez	 Castellana	 Madrid	1590000	3	152 m²	5ª	Yes	Yes
+172	Chalet adosado en El Plantío	 	 Madrid	1620000	6	265 m²	 	 	 
+91	Piso en calle Virgen del Sagrario	 Quintana	 Madrid	1800000	4	97 m²	1ª	Yes	Yes
+31	Piso en Recoletos	 	 Madrid	1800000	4	306 m²	3ª	Yes	Yes
+1	Piso en calle de Núñez de Balboa	 Recoletos	 Madrid	1800000	5	241 m²	5ª	Yes	 
+128	Casa o chalet independiente en Aravaca	 	 Madrid	1825000	9	640 m²	 	 	 
+13	Piso en paseo de la Habana	 Bernabéu-Hispanoamérica	 Madrid	1825000	4	340 m²	 	Yes	Yes
+149	Piso en PINAR DE SAN JOSE	 Pau de Carabanchel	 Madrid	1825000	4	265 m²	Bajo	Yes	Yes
+43	Piso en calle Velázquez  9	 Recoletos	 Madrid	1825000	3	193 m²	3ª	Yes	Yes
+89	Piso en calle de Don Ramón de la Cruz	 Goya	 Madrid	1825000	4	196 m²	5ª	Yes	Yes
+68	Piso en Lista	 	 Madrid	1825000	3	134 m²	3ª	Yes	 
+103	Piso en Palacio	 	 Madrid	1825000	4	72 m²	5ª	No	Yes
+150	Piso en calle de Almansa	 Ciudad Universitaria	 Madrid	1850000	1	63 m²	2ª	Yes	Yes
+15	Piso en calle del general arrando	 Almagro	 Madrid	1900000	4	257 m²	3ª	Yes	Yes
+105	Piso en Malasaña-Universidad	 	 Madrid	1900000	2	82 m²	Bajo	Yes	Yes
+124	Ático en Aravaca	 	 Madrid	1900000	4	192 m²	2ª	Yes	Yes
+45	Piso en Valdemarín	 	 Madrid	1900000	3	140 m²	1ª	Yes	Yes
+64	Casa o chalet independiente en calle Guisando	 Ciudad Universitaria	 Madrid	1900000	5	674 m²	 	 	 
+107	Ático en calle del Conde de Aranda	 Recoletos	 Madrid	1990000	5	287 m²	7ª	Yes	Yes
+47	Piso en AYALA	 Recoletos	 Madrid	1990000	2	111 m²	3ª	Yes	Yes
+17	Piso en Goya	 	 Madrid	1990000	4	297 m²	1ª	Yes	Yes
+115	Chalet pareado en Aravaca	 	 Madrid	2095000	5	360 m²	 	 	 
+25	Piso en calle de Ayala	 Recoletos	 Madrid	2095000	6	240 m²	 	Yes	Yes
+55	Chalet adosado en ebro	 El Viso	 Madrid	2095000	5	416 m²	 	 	 
+73	Piso en San Juan Bautista	 	 Madrid	2150000	3	154 m²	2ª	Yes	Yes
+66	Chalet adosado en Goya	 	 Madrid	2150000	1	120 m²	 	 	 
+14	Chalet pareado en avenida Conde Orgaz	 Conde Orgaz-Piovera	 Madrid	2150000	6	575 m²	 	 	 
+126	Casa o chalet independiente en Valdemarín	 	 Madrid	2150000	9	1.186 m²	 	 	 
+104	Piso en Chueca-Justicia	 	 Madrid	2150000	4	260 m²	5ª	Yes	Yes
+44	Piso en calle Velázquez  9	 Recoletos	 Madrid	2150000	3	240 m²	3ª	Yes	Yes
+133	Piso en Recoletos	 	 Madrid	2150000	3	222 m²	3ª	Yes	Yes
+122	Chalet adosado en Aravaca	 	 Madrid	2200000	4	330 m²	 	 	 
+178	Chalet pareado en El Plantío	 	 Madrid	2200000	5	400 m²	 	 	 
+62	Piso en paseo del Pintor Rosales	 Argüelles	 Madrid	2200000	4	412 m²	5ª	Yes	Yes
+46	Piso en paseo DE LA CASTELLANA	 Cuzco-Castillejos	 Madrid	2250000	2	135 m²	6ª	Yes	Yes
+16	Piso en NUÑEZ DE BALBOA	 Recoletos	 Madrid	2250000	5	290 m²	4ª	Yes	Yes
+106	Piso en Ibiza	 	 Madrid	2250000	5	184 m²	4ª	No	Yes
+92	Piso en calle Mayor	 Sol	 Madrid	2300000	4	148 m²	4ª	Yes	Yes
+32	Piso en Recoletos	 	 Madrid	2300000	2	225 m²	3ª	Yes	 
+2	Ático en calle de Alfonso X	 Almagro	 Madrid	2300000	3	335 m²	5ª	Yes	Yes
+74	Piso en calle de Argensola	 Chueca-Justicia	 Madrid	2350000	3	150 m²	4ª	No	Yes
+134	Piso en calle de la Cruz	 Huertas-Cortes	 Madrid	2350000	9	215 m²	1ª	Yes	Yes
+175	Piso en Goya	 	 Madrid	2450000	4	183 m²	1ª	Yes	 
+123	Casa o chalet independiente en Aravaca	 	 Madrid	2460000	6	780 m²	 	 	 
+63	Piso en paseo del Pintor Rosales	 Argüelles	 Madrid	2460000	6	412 m²	5ª	Yes	Yes
+141	Piso en Huertas-Cortes	 	 Madrid	2550000	3	178 m²	1ª	Yes	Yes
+81	Piso en calle del General Pardiñas	 Lista	 Madrid	2550000	2	129 m²	5ª	Yes	Yes
+10	Casa o chalet independiente en ronda de Cala Basa	 Conde Orgaz-Piovera	 Madrid	2850000	6	720 m²	 	 	 
+100	Piso en Bernabéu-Hispanoamérica	 	 Madrid	2850000	4	340 m²	3ª	Yes	Yes
+40	Piso en Pacífico	 	 Madrid	2850000	6	245 m²	1ª	Yes	Yes
+152	Casa o chalet independiente en avenida de la Osa Mayor	 Aravaca	 Madrid	2950000	5	417 m²	 	 	 
+153	Piso en plaza DE ESPAÑA	 Argüelles	 Madrid	2950000	2	163 m²	12ª	Yes	Yes
+147	Piso en calle DEL MARQUES DE URQUIJO	 Argüelles	 Madrid	3200000	3	150 m²	2ª	Yes	Yes
+87	Piso en calle Caribe	 San Pascual	 Madrid	3200000	4	185 m²	14ª	Yes	Yes
+138	Piso en Malasaña-Universidad	 	 Madrid	3300000	1	121 m²	3ª	Yes	Yes
+78	Piso en calle gaztambide	 Gaztambide	 Madrid	3300000	3	135 m²	4ª	Yes	Yes
+86	Piso en calle de Sangarcía	 Imperial	 Madrid	3355000	4	127 m²	1ª	Yes	Yes
+146	Piso en avenida Corazon de maria	 Prosperidad	 Madrid	3355000	4	236 m²	2ª	Yes	Yes
+88	Piso en calle Jorge Juan	 Recoletos	 Madrid	3400000	4	203 m²	1ª	Yes	Yes
+148	Piso en calle Mozart	 Casa de Campo	 Madrid	3400000	3	123 m²	4ª	Yes	Yes
+112	Piso en calle Ajofrín	 Amposta	 Madrid	3400000	3	95 m²	Bajo	Yes	Yes
+22	Casa o chalet independiente en avenida de Valdemarín	 Valdemarín	 Madrid	3400000	7	800 m²	 	 	 
+52	Piso en calle de Don Ramón de la Cruz	 Goya	 Madrid	3400000	4	210 m²	5ª	Yes	Yes
+61	Casa o chalet independiente en calle del Maestro Ripoll	 El Viso	 Madrid	3595000	5	370 m²	 	 	 
+121	Piso en Castellana	 	 Madrid	3595000	5	274 m²	1ª	Yes	 
+154	Piso en calle de Andrés Mellado	 Vallehermoso	 Madrid	3800000	4	234 m²	4ª	Yes	Yes
+143	Piso en Conde Orgaz-Piovera	 	 Madrid	3800000	5	407 m²	1ª	Yes	Yes
+83	Piso en glorieta DE QUEVEDO	 Trafalgar	 Madrid	3800000	5	165 m²	3ª	Yes	Yes
+151	Piso en plaza de Felipe II	 Goya	 Madrid	3995000	6	196 m²	3ª	Yes	Yes
+85	Casa o chalet independiente en calle DE LOS OLIVOS	 Vallehermoso	 Madrid	4200000	5	512 m²	 	 	 
+145	Piso en calle de Cándido Mateos	 Peñagrande	 Madrid	4200000	3	126 m²	5ª	Yes	Yes
+165	Ático en calle de Alfonso X	 Almagro	 Madrid	4500000	4	257 m²	 	Yes	Yes
